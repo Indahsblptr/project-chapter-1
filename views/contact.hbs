@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <title>Contact Me</title>
+        <link rel="stylesheet" href="/public/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="contact.js"></script>
+    </head>
+    <body>
+    <!-- Nav Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-navbar">
+            <div class="container">
+            <a class="navbar-brand me-5" href="#"><img src="/public/assets/logo.png" /></a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                        class="nav-link active"
+                        aria-current="page"
+                        href="/my-project"
+                        >Add My Project</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a
+                        class="nav-link active"
+                        aria-current="page"
+                        href="/login"
+                        >Login</a>
+                    </li>
+                </ul>
+
+                <a href="#" class="btn btn-dark text-white">Contact Me</a>
+            </div>
+            </div>
+        </nav>
+
+        <!-- END of Nav Bar -->
+
+        <div class="container-contact-me">
+
+            <form style="width: 400px; margin: auto; margin-top: 30px; font-family: Arial, Helvetica, sans-serif;">
+                <center><h2>GET IN TOUCH</h2></center>
+    
+                <div style="margin-bottom: 20px;">
+                    <label for="input-name" style="font-size: 23px; font-weight: 600; font-family: Arial, Helvetica, sans-serif;">Name</label>
+                    <input 
+                        type="text" 
+                        id="input-name" 
+                        style="
+                            width: 100%;
+                            background-color: white;
+                            border: 1px solid rgb(199, 199, 199);
+                            border-radius: 5px;
+                            padding: 8px;
+                            margin-top: 10px;
+                            box-shadow: 7px 7px 7px rgb(192, 188, 188);">
+                </div>
+    
+                <div style="margin-bottom: 20px;">
+                    <label for="input-email"  style="font-size: 23px; font-weight: 600; font-family: Arial, Helvetica, sans-serif;">Email</label>
+                    <input type="email" id="input-email" style="
+                    width: 100%;
+                    background-color: white;
+                    border: 1px solid rgb(199, 199, 199);
+                    border-radius: 5px;
+                    padding: 8px;
+                    margin-top: 10px;
+                    box-shadow: 7px 7px 7px rgb(192, 188, 188);">
+                </div>
+    
+                <div style="margin-bottom: 20px;">
+                    <label for="input-number"  style="font-size: 23px; font-weight: 600; font-family: Arial, Helvetica, sans-serif;">Phone Number</label>
+                    <input type="tel" id="phone-number" style="
+                    width: 100%;
+                    background-color: white;
+                    border: 1px solid rgb(199, 199, 199);
+                    border-radius: 5px;
+                    padding: 8px;
+                    margin-top: 10px;
+                    box-shadow: 7px 7px 7px rgb(192, 188, 188);">
+                </div>
+    
+                <div style="margin-bottom: 20px;">
+                    <label for="select-subject" style="font-size: 23px; font-weight: 600; font-family: Arial, Helvetica, sans-serif;">Subject</label>
+                    <select id="select-subject" style="
+                    width: 100%;
+                    background-color: white;
+                    border: 1px solid rgb(199, 199, 199);
+                    border-radius: 5px;
+                    padding: 8px;
+                    margin-top: 10px;
+                    box-shadow: 7px 7px 7px rgb(192, 188, 188);">
+                        <option hidden></option>
+                        <option>I'm Hiring</option>
+                        <option>Let's Collaboration</option>
+                        <option>Let's Talk</option>
+                    </select>
+                </div>
+    
+                <div style="margin-bottom: 20px;">
+                    <label for="input-message" style="font-size: 23px; font-weight: 600; font-family: Arial, Helvetica, sans-serif;">Your Message</label>
+                    <textarea id="input-message" style="
+                    width: 100%;
+                    background-color: white;
+                    border: 1px solid rgb(199, 199, 199);
+                    border-radius: 5px;
+                    padding: 8px;
+                    margin-top: 10px;
+                    box-shadow: 7px 7px 7px rgb(192, 188, 188);">
+                    </textarea>
+                </div>
+    
+                <button
+                    type="button"
+                    onclick="submitForm()"
+                    style="
+                        padding: 5px 30px; 
+                        float: right;
+                        background-color: rgb(0, 0, 0); 
+                        border: none;
+                        border-radius: 20px;
+                        color: white;
+                        font-size: 18px;
+                        margin 10px">
+                    Submit
+                </button>
+                
+            </form>
+
+        </div>
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous">
+</script>
+        
+    </body>
+</html>

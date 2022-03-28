@@ -1,0 +1,119 @@
+<html>
+
+    <head>
+        <title>Task Chapter 2</title>
+        <link rel="stylesheet" href="/public/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+    <!-- Nav Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-navbar">
+            <div class="container">
+              <a class="navbar-brand me-5" href="/"><img src="/public/assets/logo.png" /></a>
+      
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+      
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active text-orange" aria-current="page" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      aria-current="page"
+                      href="/my-project"
+                      >Add My Project</a
+                    >
+                  </li>
+                </ul>
+                <a href="/register" class="nav-link active text-orange">Register</a>
+                <a href="/login" class="nav-link active text-orange">Login</a>
+                <a href="/contact" class="btn btn-dark text-white">Contact Me</a>
+              </div>
+            </div>
+          </nav>
+
+        <!-- END of Nav Bar -->
+        <div class="project-detail">
+            <h1>{{project.nameproject}}</h1>
+            <div class="project-detail-container">
+                <div class="main-project-container">
+                    <div class="project-detail-left">
+                        <img src="/public/assets/photo.jpg" alt="img">
+                    </div>
+                    <div class="project-detail-right">
+                        <div class="duration">
+                            <h3>Duration</h3>
+                            <div class="main-cal-month" style="width: 30px" "height:30px" "padding:30px"> 
+                                <div class="calendar">
+                                    <img src="/public/assets/calendar.svg"/>
+                                    {{project.startdateproject}} - {{project.enddateproject}}
+                                </div>
+                                <div class="month">
+                                    <img src="/public/assets/clock.svg"/>
+                                        {{project.time}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="technologies-icon">
+                            <h3>Technologies</h3>
+                            <div class="tech">
+                                <div class="tech-left">
+                                    <div>
+                                        {{#if project.reactjs}}
+                                        <img src="/public/assets/react.svg"/>
+                                        <span>React Js</span>
+                                        {{/if}}
+                                    </div>
+                                    <div>
+                                        {{#if project.nodejs}}
+                                        <img src="/public/assets/node-js.svg"/>
+                                        <span>Node Js</span>
+                                        {{/if}}
+                                    </div>
+                                </div>
+                                <div class="tech-right">
+                                    <div>
+                                        {{#if project.nextjs}}
+                                        <img src="/public/assets/next-js.svg"/><span>Next Js</span>
+                                        {{/if}}
+                                    </div>
+                                    <div>
+                                        {{#if project.typescript}}
+                                        <img src="/public/assets/typescript.svg"/>
+                                        <span>TypeScript</span>
+                                        {{/if}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-description">
+                <p>
+                    {{project.description}}
+                </p>
+            </div>
+        </div>
+  <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous">
+  </script>
+    </body>
+
+</html>
